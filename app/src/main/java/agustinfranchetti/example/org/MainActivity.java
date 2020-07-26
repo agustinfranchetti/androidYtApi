@@ -15,18 +15,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         Button btnSingle = (Button) findViewById(R.id.btnSingle);
+        btnSingle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, YoutubeActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Button btnStandalone = (Button) findViewById(R.id.btnStandalone);
-        btnSingle.setOnClickListener(this);
-        btnStandalone.setOnClickListener(this);
+        btnStandalone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SubmenuActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
+    public void onClick(View view) {
+        
+    }
+
+    /*@Override
     public void onClick(View view) {
         Intent intent = null;
 
         switch (view.getId()) {
             case R.id.btnSingle:
                 intent = new Intent(this, YoutubeActivity.class);
+
             case R.id.btnStandalone:
                 intent = new Intent(this, SubmenuActivity.class);
                 break;
@@ -35,5 +54,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (intent != null) {
             startActivity(intent);
         }
-    }
+    }*/
 }
