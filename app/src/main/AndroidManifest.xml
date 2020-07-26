@@ -2,11 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="agustinfranchetti.example.org">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="YouMalone"
+        android:label="PostyTube"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -17,8 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".YoutubeActivity" android:exported="true">
-        </activity>
+        <activity
+            android:name=".YoutubeActivity"
+            android:label="YoutubeActivity"></activity>
+        <activity
+            android:name=".SubmenuActivity"
+            android:label="SubmenuActivity"></activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

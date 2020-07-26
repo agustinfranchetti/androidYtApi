@@ -25,7 +25,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSubmenu"
+        app:layout_constraintTop_toBottomOf="@+id/btnStandalone"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/posty" />
 
@@ -39,7 +39,7 @@
         app:srcCompat="@drawable/signature" />
 
     <Button
-        android:id="@+id/btnPlaySingle"
+        android:id="@+id/btnSingle"
         android:layout_width="178dp"
         android:layout_height="51dp"
         android:layout_marginTop="200dp"
@@ -50,14 +50,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnSubmenu"
+        android:id="@+id/btnStandalone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Submenu Reproduccion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPlaySingle" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSingle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
