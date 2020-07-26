@@ -15,16 +15,30 @@ public class SubmenuActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_submenu);
 
         Button btnPlayVideo = (Button) findViewById(R.id.btnPlayVideo);
-        Button btnPlayList = (Button) findViewById(R.id.btnPlayList);
+        btnPlayVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(YouTubeStandalonePlayer.createVideoIntent(SubmenuActivity.this, YoutubeActivity.YT_APIP, YoutubeActivity.YT_VIDEO_ID));
+                startActivity(intent);
+            }
+        });
 
-        btnPlayVideo.setOnClickListener(this);
-        btnPlayList.setOnClickListener(this);
+        Button btnPlayList = (Button) findViewById(R.id.btnPlayList);
+        btnPlayList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(YouTubeStandalonePlayer.createVideoIntent(SubmenuActivity.this, YoutubeActivity.YT_APIP, YoutubeActivity.YT_PLAYLIST));
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
     public void onClick(View view) {
 
-        Intent intent = null;
+    }
+
+        /*Intent intent = null;
         switch (view.getId()){
             case R.id.btnPlayVideo:
                 intent = YouTubeStandalonePlayer.createVideoIntent(this, YoutubeActivity.YT_APIP, YoutubeActivity.YT_VIDEO_ID);
@@ -38,7 +52,7 @@ public class SubmenuActivity extends AppCompatActivity implements View.OnClickLi
 
         if (intent != null) {
             startActivity(intent);
-        }
+        }*/
 
-    }
+
 }
